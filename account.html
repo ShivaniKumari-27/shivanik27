@@ -28,85 +28,42 @@
           <img src="images.png" class="menu-icon" onclick="menutoggle()">
         </div>
 </div>
-<!------cart items details----->
-<div class="small-container cart-page">
-    <table>
-       <tr>
-        <th>Product</th>
-        <th>Quantity</th>
-        <th>Subtotal</th>
-       </tr>
-       <tr>
-        <td>
-            <div class="cart-info">
-                <img src="black and white full length">
-                <div>
-                    <p>Black And White Flared  Dress for women</p>
-                    <small>Price:$50.00</small>
-                    <a href="">Remove</a>
-                </div>
+
+<!----------------------account-page----------------->
+
+<div class="account-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+                <img src="full-length-portrait-beautiful-happy-cute-smiling-brunette-woman-girl-casual-green-hipster-summer-clothes-isolated-white-listening-music-smartphone-with-headphones_158538-12398.avif" width="100%">
             </div>
-        </td>   
-        </td>
-        <td><input type="number" value="1"></td>
-        <td>$50.00</td>
-       </tr>
-       <tr>
-        <td>
-            <div class="cart-info">
-                <img src="shoes.jpg">
-                <div>
-                    <p> Red Tape Shoes</p>
-                    <small>Price:$29.00</small>
-                    <a href="">Remove</a>
-                </div>
+            <div class="col-2">
+              <div class="form-container">
+                  <div class="form-btn">
+                    <span onclick="Login()">Login</span>
+                    <span onclick="Register()">Register</span>
+                    <hr id="Indicator">
+                  </div>
+                  <form id="LoginForm">
+                    <input type="text" placeholder="Username">
+                    <input type="Password" placeholder="Password">
+                    <button type="Submit" class="btn">Login</button>
+                    <a href="">Forgot Password</a>
+                  </form>
+                  <form id="RegForm">
+                    <input type="text" placeholder="Username">
+                    <input type="email" placeholder="Email">
+                    <input type="Password" placeholder="Password">
+                    <button type="Submit" class="btn">Register</button>
+                </form>
             </div>
-        </td>   
-        </td>
-        <td><input type="number" value="1"></td>
-        <td>$50.00</td>
-       </tr>
-       <tr>
-        <td>
-            <div class="cart-info">
-                <img src="jeans top">
-                <div>
-                    <p>Jeans Top For Women</p>
-                    <small>Price:$80.00</small>
-                    <a href="">Remove</a>
-                </div>
             </div>
-        </td>   
-        </td>
-        <td><input type="number" value="1"></td>
-        <td>$50.00</td>
-       </tr>
-    </table>
-    <div class="total-price">
-    <table>
-        <tr>
-            <td>Subtotal</td>
-            <td>$150.00</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Tax</td>
-            <td>$35.00</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Total</td>
-            <td>$185.00</td>
-            <td></td>
-        </tr>
-    </table>
+        </div>
     </div>
 </div>
 
-
-
-
 <!-----------------------footer------------------->
+
 <div class="footer">
     <div class="container">
         <div class="row">
@@ -148,7 +105,30 @@
         <p class="Copyright"> Copyright- GreatStack</p>
     </div>
 </div>
+
 <!----for toggle menu-->
+
 <script src="ecom.js"></script>
+<!---------js for toggle form------->
+<script>
+    var LoginForm=document.getElementById("LoginForm");
+    var RegForm=document.getElementById("RegForm");
+    var Indicator=document.getElementById("Indicator");
+    function Register(){
+        RegForm.style.transform = "translateX(0px)";
+        LoginForm.style.transform = "translateX(0px)";
+        Indicator.style.transform = "translateX(100px)";
+    }
+    function Login(){
+        RegForm.style.transform = "translateX(300px)";
+        LoginForm.style.transform = "translateX(300px)";
+        Indicator.style.transform = "translateX(0px)";
+    }
+
+
+
+</script>
 </body>
 </html>
+
+
