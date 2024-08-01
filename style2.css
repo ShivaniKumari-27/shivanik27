@@ -1,0 +1,67 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background-color: red;
+    overflow:hidden;
+}
+.gameContainer{
+    background-image:url(arnygfx180200948.jpg);
+    background-repeat: no-repeat;
+    background-size:100vw 100vh ;
+    width:100%;
+    height:100vh;
+}
+
+.puppy{
+    background-image:url(cute-baby-dog-cartoon-posing-on-white-background-free-vector.jpg);
+    background-repeat:no-repeat;
+    background-size:cover;
+    width:190px;
+    height:180px;
+
+    position:absolute;
+    bottom:0;
+    left:50px;
+
+}
+.obstacle{
+    background-image:url(cute-little-monkey-cartoon-sitting-vector-48178866.jpg);
+    background-size:cover;
+    width:150px;
+    height:170px;
+    position:absolute;
+    bottom:0;
+    left:44vw;
+}
+.obstacleAni{
+    animation: obstacleAni 5s linear infinite; 
+}
+.gameOver{
+    visibility:hidden;
+    
+}
+.animatePuppy{
+    animation:puppy 0.6s linear;
+
+}
+@keyframes puppy{
+    0%{
+       bottom:0;
+    }
+    50%{
+       bottom:422px;
+    }
+    100%{
+        bottom:0;
+    }
+}
+@keyframes obstacleAni{
+    0%{
+        left:100vw;
+    }
+    100%{
+        left:-10vw;
+    }
+}
